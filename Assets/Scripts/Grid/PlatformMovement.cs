@@ -53,10 +53,7 @@ public class PlatformMovement : MonoBehaviour
     {
         if (playerObject == null) return;
 
-
-
         // Obtener la posición relativa del objeto con respecto al jugador
-        //Vector3 relativePosition = playerObject.transform.InverseTransformPoint(transform.position);
         Vector3 relativeDirection = playerObject.transform.InverseTransformDirection(transform.position - playerObject.transform.position);
         Debug.Log("relativePosition.x: " + relativeDirection.x);
         // Determinar si el objeto está a la izquierda o a la derecha del jugador
